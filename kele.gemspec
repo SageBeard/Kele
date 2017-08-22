@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = "Creating a gem for Bloc project"
   spec.homepage      = "https://github.com/SageBeard/Kele.git"
 
-  spec.files         = ['lib/kele.rb']
+  spec.files         = ['lib/kele.rb','lib/roadmap.rb']
 
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
