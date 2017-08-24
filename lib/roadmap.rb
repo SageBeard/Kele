@@ -5,7 +5,7 @@ module Roadmap
       body: { roadmap_id: roadmap_id }
     }
     response = self.class.get("#{base_uri}/roadmaps/37", headers: { "authorization" => @auth_token })
-    @roadmap = JSON.parse(response.body)
+    JSON.parse(response.body)
   end
 
   def get_checkpoint(checkpoint_id)
@@ -13,6 +13,6 @@ module Roadmap
       body: { checkpoint_id: checkpoint_id }
     }
     response = self.class.get("#{base_uri}/checkpoints/2321", headers: { "authorization" => @auth_token })
-    @checkpoint = JSON.parse(response.body)
+    JSON.parse(response.body)
   end
 end
