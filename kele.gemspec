@@ -1,16 +1,11 @@
-# coding: utf-8
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "kele/version"
-
 Gem::Specification.new do |spec|
   spec.name          = "kele"
   spec.version       = Kele::VERSION
   spec.authors       = ["Sage Beard"]
   spec.email         = ["sagek711@gmail.com"]
 
-  spec.summary       = "Creating a gem for Bloc project"
-  spec.description   = "Creating a gem for Bloc project"
+  spec.summary       = "Kele API Client"
+  spec.description   = "A client for Bloc API"
   spec.homepage      = "http://rubygems.org/gems/kele"
 
   spec.files         = ["lib"]
