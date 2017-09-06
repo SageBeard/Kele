@@ -33,4 +33,20 @@ class Kele
     response = self.class.get("#{base_uri}/mentors/670353/student_availability", headers: { "authorization" => @auth_token })
     JSON.parse(response.body)
   end
+
+  def get_messages(number)
+    options = {
+      body: { number: number }
+    }
+    response = self.class.get("#{base_uri}/message_threads", headers: { "authorization" => @auth_token })
+    JSON.parse(response.body)
+  end
+
+  def create_message(sender, recipient_id, token, subject, body)
+    options = {
+      body: { sender: sender, recipient_id: recipient_id, token: token, subject: subject, stripped: body }
+    }
+    response = self.class.get("#{base_uri}/messages", headers: { "authorization" => @auth_token })
+    JSON.parse(response.body)
+  end
 end
